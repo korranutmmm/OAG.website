@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สำนักงานอัยการสูงสุด</title>
+
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #212121, #945DF6);
+}
+.logo {
+    width: 30px;       /* ขนาด */
+    margin-bottom: 1px;
+    filter: drop-shadow(0 8px 4px rgba(0,0,0,0.3));
+    
+}
+
+/* ===== Browser ===== */
+.browser {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Top Bar ===== */
+.browser-top {
+    background: #f1f3f4;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.url {
+    margin-left: 15px;
+    flex: 1;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== Content ===== */
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Glass Box ===== */
+.glass-box {
+    padding: 30px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* 🎬 Animation ตอนเข้า */
+    animation: fadeUp 1s ease;
+}
+
+/* ===== Buttons ===== */
+button {
+    width: 250px;
+    height: 50px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    background: #0d47a1;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* hover */
+button:hover {
+    background: #1565c0;
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* ตอนกด */
+button:active {
+    transform: scale(0.95);
+}
+
+/* ===== Animation Keyframes ===== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glass ขยับเบาๆ */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+.glass-box {
+    animation: fadeUp 1s ease, float 4s ease-in-out infinite;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="browser">
+
+    <!-- Top -->
+    <div class="browser-top">
+        <div class="circle red"></div>
+        <div class="circle yellow"></div>
+        <div class="circle green"></div>
+
+        <div class="url">
+            https://สำนักงานอัยการสูงสุด.go.th
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <div class="glass-box">
+            <img src="logo.png" class="logo">
+<h2>เมนูหลัก</h2>
+
+            <a href="info.html"><button>ข้อมูลของสำนักงาน</button></a>
+            <a href="history.html"><button>ประวัติศาสตร์สำนักงาน</button></a>
+            <a href="boss.html"><button>ผู้บริหาร</button></a>
+            <a href="goal.html"><button>ติดต่อสำนักงาน</button></a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

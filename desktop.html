@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desktop</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: url('windows_xp_bliss-wide.jpg') no-repeat center center;
+    background-size: cover;
+    font-family: Arial;
+}
+
+/* ===== ไอคอน ===== */
+.icon {
+    width: 80px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    cursor: pointer;
+}
+
+/* เอฟเฟกต์ */
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.icon:active {
+    transform: scale(0.95);
+}
+
+/* ตอนเลือก */
+.selected {
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
+
+/* รูป */
+.icon img {
+    width: 64px;
+}
+
+/* ข้อความ */
+.icon p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* ===== หน้าโหลด ===== */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: white;
+    font-size: 18px;
+}
+
+/* วงหมุน */
+.spinner {
+    border: 5px solid #ccc;
+    border-top: 5px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ไอคอน -->
+<div class="icon" onclick="openWeb(this)">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png">
+    <p>เข้าเว็บ</p>
+</div>
+
+<!-- หน้าโหลด -->
+<div class="loading" id="loadingScreen">
+    <div class="spinner"></div>
+    กำลังโหลด...
+</div>
+
+<script>
+function openWeb(el) {
+
+    // ลบ selection เก่า
+    document.querySelectorAll('.icon').forEach(i => i.classList.remove('selected'));
+
+    // เลือกอันใหม่
+    el.classList.add('selected');
+
+    // แสดงหน้าโหลด
+    document.getElementById("loadingScreen").style.display = "flex";
+
+    // หน่วงเวลา
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 3000);
+}
+</script>
+
+</body>
+</html>

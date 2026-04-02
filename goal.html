@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ข้อมูลสำนักงาน</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f6f9;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 10px 40px;
+
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+            z-index: 1000;
+        }
+
+        /* ซ้าย */
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 45px;
+        }
+
+        .title .en {
+            font-size: 14px;
+            color: #0d47a1;
+        }
+
+        /* ===== เมนูแบบมีกรอบ ===== */
+        .nav {
+    margin-left: auto;
+    margin-left: 60px /* 👈 ดันไปขวา */
+    
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+
+    padding: 8px 20px;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0d47a1;
+            font-size: 14px;
+            padding: 6px 10px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            background: rgba(13,71,161,0.1);
+        }
+
+        /* ===== กล่องเนื้อหา ===== */
+        .container {
+            max-width: 800px;
+            margin: 140px auto 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #0d47a1;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #333;
+            border-left: 5px solid #0d47a1;
+            padding-left: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #444;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #0d47a1;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🔥 HEADER -->
+<div class="header">
+
+    <div class="left">
+        <img src="logo.png" class="logo">
+        <div class="title">
+            <div class="en">𝐎𝐟𝐟𝐢𝐜𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐀𝐭𝐭𝐨𝐫𝐧𝐞𝐲 𝐆𝐞𝐧𝐞𝐫𝐚𝐥</div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <a href="info.html">ข้อมูล</a>
+        <a href="history.html">ประวัติ</a>
+        <a href="boss.html">ผู้บริหาร</a>
+        <a href="goal.html">จุดประสงค์</a>
+    </div>
+
+</div>
+
+<!-- 🔥 เนื้อหา -->
+<div class="container">
+
+    <h1>ติดต่อสำนักงาน</h1>
+
+    <p>
+    สำนักงานอัยการสูงสุด เป็นหน่วยงานของรัฐที่มีหน้าที่หลักในการดำเนินคดีแทนแผ่นดิน 
+    ให้คำปรึกษาทางกฎหมายแก่หน่วยงานของรัฐ และคุ้มครองสิทธิของประชาชนตามกฎหมาย
+    </p>
+
+    <h2>หน้าที่หลัก</h2>
+    <ul>
+        <li>ดำเนินคดีอาญาและคดีแพ่งแทนรัฐ</li>
+        <li>ให้คำปรึกษาทางกฎหมายแก่หน่วยงานราชการ</li>
+        <li>ตรวจสอบร่างกฎหมายและสัญญา</li>
+        <li>คุ้มครองสิทธิและเสรีภาพของประชาชน</li>
+    </ul>
+
+    <h2>วิสัยทัศน์</h2>
+    <p>
+    เป็นองค์กรหลักด้านกฎหมายของรัฐที่มีความเป็นธรรม โปร่งใส และเชื่อถือได้
+    </p>
+
+    <a href="index.html" class="btn">← กลับหน้าแรก</a>
+
+</div>
+
+</body>
+</html>
